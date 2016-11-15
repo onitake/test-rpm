@@ -1,3 +1,6 @@
+PACKAGS_NAME=${PROJECT_NAME}
+VERSION=$(shell git describe --abbrev=0 --tags)
+
 all:
 	echo "PROJECT_NAME: ${PROJECT_NAME}"
 	echo "PROJECT_GIT: ${PROJECT_GIT}"
@@ -5,5 +8,5 @@ all:
 	echo "BUILD_BRANCH: ${BUILD_BRANCH}"
 	echo "DEPLOY_AUTO: ${DEPLOY_AUTO}"
 	echo "BUILD_NUMBER: ${BUILD_NUMBER}"
-	touch "SPECS/${PACKAGE_NAME}-${VERSION}-${BUILD_NUMBER}.noarch.rpm"
+	touch "${PACKAGE_NAME}-${VERSION}-${BUILD_NUMBER}.noarch.rpm"
 
