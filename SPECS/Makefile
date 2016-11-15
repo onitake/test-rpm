@@ -9,5 +9,5 @@ all:
 	echo "BUILD_BRANCH: ${BUILD_BRANCH}"
 	echo "DEPLOY_AUTO: ${DEPLOY_AUTO}"
 	echo "BUILD_NUMBER: ${BUILD_NUMBER}"
-	echo "RPM: ${PACKAGE_RPM}"
+	touch -- "${PACKAGE_RPM}"
 
